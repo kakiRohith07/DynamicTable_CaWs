@@ -29,7 +29,7 @@ public class AppTest {
             
             System.setProperty("webdriver.chrome.driver", "C:\\Users\\KAKIR\\Downloads\\chromedriver-win64\\chromedriver.exe");
             driver = new ChromeDriver();
-            wait = new WebDriverWait(driver, Duration.ofSeconds(90));
+            wait = new WebDriverWait(driver, Duration.ofSeconds(20));
            
             driver.get("https://testpages.herokuapp.com/styled/tag/dynamic-table.html");
         } catch (Exception e) {
@@ -82,7 +82,7 @@ public class AppTest {
 
 
             JSONObject currentRow = inputData.getJSONObject(0);
-            Thread.sleep(5000);
+            Thread.sleep(4000);
      
             assertEquals(currentRow.getString("name"), columns.get(0).getText());
             assertEquals(currentRow.getInt("age"), Integer.parseInt(columns.get(1).getText()));
